@@ -1,6 +1,8 @@
 package main_test
 
 import (
+	"fmt"
+	"os"
 	"testing"
 )
 
@@ -24,6 +26,7 @@ func TestSample(t *testing.T) {
 		},
 	} {
 		t.Run(tt.name, func(t *testing.T) {
+			fmt.Println("Env CI:", os.Getenv("CI"))
 			if tt.expect {
 				return
 			}
