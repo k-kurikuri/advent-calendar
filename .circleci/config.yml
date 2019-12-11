@@ -4,6 +4,7 @@ jobs:
   build:
     environment:
       - GOPATH: /home/circleci/go
+      - GOTEST_PALETTE: yellow,blue
     docker:
       - image: circleci/golang:1.12
     working_directory: /home/circleci/go/src/github.com/k-kurikuri/advent-calendar
